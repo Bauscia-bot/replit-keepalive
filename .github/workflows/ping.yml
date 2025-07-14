@@ -1,0 +1,13 @@
+name: Ping Replit
+
+on:
+  schedule:
+    - cron: "*/10 * * * *"  # Ogni 10 minuti (UTC)
+  workflow_dispatch:
+
+jobs:
+  ping:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Keep Replit alive
+        run: curl -s https://replit.com/@imieibottelegra/telegram-bot
